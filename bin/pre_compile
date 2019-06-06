@@ -7,3 +7,6 @@ cat netbox/requirements.txt >> requirements.txt
 sed -i'' -e "s|SecurityMiddleware',|SecurityMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware',|" netbox/netbox/netbox/settings.py
 
 cp configuration.py netbox/netbox/netbox/configuration.py
+
+echo >> netbox/netbox/netbox/settings.py
+echo 'SECURE_SSL_REDIRECT = True' >> netbox/netbox/netbox/settings.py
