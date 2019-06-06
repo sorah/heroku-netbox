@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath /app/netbox netbox.wsgi:application
+web: gunicorn --pythonpath /app/netbox/netbox netbox.wsgi:application
