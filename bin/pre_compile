@@ -1,0 +1,8 @@
+#!/bin/bash -x
+cat netbox/requirements.txt >> requirements.txt
+
+echo >> netbox/netbox/wsgi.py
+echo 'from whitenoise.django import DjangoWhiteNoise' >> netbox/netbox/wsgi.py
+echo 'application = DjangoWhiteNoise(application)' >> netbox/netbox/wsgi.py
+
+cp configuration.py netbox/netbox/netbox/configuration.py
