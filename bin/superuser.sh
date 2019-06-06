@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname $0)/../netbox"
-./manage.py shell --interface python << END
+./netbox/manage.py shell --interface python << END
 from django.contrib.auth.models import User
 from users.models import Token
 if not User.objects.filter(username='${SUPERUSER_NAME}'):
