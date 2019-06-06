@@ -4,6 +4,6 @@ cat netbox/requirements.txt >> requirements.txt
 #echo >> netbox/netbox/wsgi.py
 #echo 'from whitenoise.django import DjangoWhiteNoise' >> netbox/netbox/wsgi.py
 #echo 'application = DjangoWhiteNoise(application)' >> netbox/netbox/wsgi.py
-sed -i'' -e "s|SecurityMiddleware',|SecurityMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware',|" netbox/netbox/settings.py
+sed -i'' -e "s|SecurityMiddleware',|SecurityMiddleware', 'whitenoise.middleware.WhiteNoiseMiddleware',|" netbox/netbox/netbox/settings.py
 
 cp configuration.py netbox/netbox/netbox/configuration.py

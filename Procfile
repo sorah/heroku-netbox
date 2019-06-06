@@ -1,1 +1,1 @@
-web: bash -c 'cd netbox && exec gunicorn netbox.wsgi:application'
+web: gunicorn --pythonpath /app/netbox netbox.wsgi:application
